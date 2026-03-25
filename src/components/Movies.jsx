@@ -1,14 +1,12 @@
 import { useState } from "react";
 import searchMovieFetch from "../API/searchmovie";
 
-export const Movies = () => {
+const Movies = () => {
   const [query, setQuery] = useState("");
   const [movie, setMovie] = useState(null);
 
   const changeQuery = (value) => {
     setQuery(value);
-
-    console.log(movie);
   };
 
   const newFetch = () => {
@@ -43,3 +41,5 @@ export const Movies = () => {
     </>
   );
 };
+
+export default Movies;

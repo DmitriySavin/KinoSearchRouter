@@ -7,8 +7,8 @@ export const allMoviesFetch = () => {
     .catch("error");
 };
 
-export const getMoviesById = (movieId) => {
-  return fetch(`${BASE_URL}movie/${movieId}?api_key=${BASE_API}`).then((res) =>
+export const getMoviesById = (moviesId) => {
+  return fetch(`${BASE_URL}movie/${moviesId}?api_key=${BASE_API}`).then((res) =>
     res.json(),
   );
 };

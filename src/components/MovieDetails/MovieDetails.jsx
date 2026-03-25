@@ -1,8 +1,9 @@
-import { useParams } from "react-router-dom";
-import { getMoviesById } from "../API/api-service";
+import { useParams, Outlet, Link } from "react-router-dom";
+import { getMoviesById } from "../../API/api-service";
 import { useEffect, useState } from "react";
+import styles from "./MovieDetails.module.css"
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { moviesId } = useParams();
   const [movie, setMovie] = useState();
 
@@ -21,13 +22,19 @@ export const MovieDetails = () => {
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
             alt="movie"
+            className={styles.image}
           />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
             laboriosam!
           </p>
+          <Link to={`cast`}>Автор</Link>
+          <Link to={`rewievs`}>Огляди</Link>
+          <Outlet />
         </>
       )}
     </>
   );
 };
+
+export default MovieDetails;

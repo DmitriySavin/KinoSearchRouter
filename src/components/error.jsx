@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 
-export const Error = () => {
+ const Error = () => {
     return (
         <>
          <h2>page not found...</h2>
@@ -12,3 +12,5 @@ export const Error = () => {
        
     )
 }
+
+export default Error;

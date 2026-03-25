@@ -1,0 +1,27 @@
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 20px;
+  /* width: 100hw; */
+  list-style: none;
+  margin: 0 auto;
+  /* padding: 0; */
+}
+.item {
+  flex-basis: calc((100% - 20px) / 2);
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+}
+
+.title {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 30px;
+}
+
+.image {
+  margin-top: 20px;
+}

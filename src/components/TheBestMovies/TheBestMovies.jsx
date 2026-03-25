@@ -1,9 +1,10 @@
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { allMoviesFetch } from "../../API/api-service";
-import { getMoviesById } from "../../API/api-service";
+// import { getMoviesById } from "../../API/api-service";
 import { Link } from "react-router-dom";
+import styles from "../TheBestMovies/TheBestMovies.module.css";
 
-export const TheBestMovies = () => {
+const TheBestMovies = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -13,14 +14,17 @@ export const TheBestMovies = () => {
   }, []);
 
   return (
-    <ul>
+    <ul className={styles.list}>
       {movies.map((movie) => {
         return (
-          <li key={movie.title}>
-            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+          <li key={movie.title} className={styles.item}>
+            <Link to={`/movies/${movie.id}`} className={styles.title}>
+              {movie.title}
+            </Link>
             <img
               src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
               alt={movie.title}
+              className={styles}
             />
           </li>
         );
@@ -28,3 +32,5 @@ export const TheBestMovies = () => {
     </ul>
   );
 };
+
+export default TheBestMovies;
