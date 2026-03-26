@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-DAs1UGHr.js";var t=e(),n=()=>(0,t.jsx)(t.Fragment,{children:(0,t.jsx)(`p`,{children:`+-10000000`})});export{n as default};
