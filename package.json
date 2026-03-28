@@ -2,7 +2,7 @@
   "name": "kinosearchrouter",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://dmitriysavin.github.io/KinoSearchRouter/",
+  "homepage": "https://DmitriySavin.github.io/KinoSearchRouter/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
