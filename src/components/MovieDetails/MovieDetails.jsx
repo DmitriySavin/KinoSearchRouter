@@ -1,7 +1,7 @@
 import { useParams, Outlet, Link } from "react-router-dom";
 import { getMoviesById } from "../../API/api-service";
 import { useEffect, useState } from "react";
-import styles from "./MovieDetails.module.css"
+import styles from "./MovieDetails.module.css";
 
 const MovieDetails = () => {
   const { moviesId } = useParams();
@@ -28,8 +28,11 @@ const MovieDetails = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
             laboriosam!
           </p>
-          <Link to={`cast`}>Автор</Link>
-          <Link to={`rewievs`}>Огляди</Link>
+          <nav className={styles.navigation}>
+            <Link to={`cast`}>Автор</Link>
+            <Link to={`rewievs`}>Огляди</Link>
+          </nav>
+
           <Outlet />
         </>
       )}

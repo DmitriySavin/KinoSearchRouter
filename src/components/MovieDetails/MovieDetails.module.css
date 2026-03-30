@@ -2,3 +2,10 @@
   width: 500px;
   margin: 0 auto;
 }
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
