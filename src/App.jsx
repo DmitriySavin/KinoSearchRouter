@@ -6,7 +6,7 @@ import styles from './App.module.css'
 const Movies = lazy(() => import("./components/Movies"));
 const MovieDetails = lazy(() => import("./components/MovieDetails/MovieDetails"));
 const Error = lazy(() => import("./components/Error"));
-const Cast = lazy(() => import("./components/cast"));
+const Cast = lazy(() => import("./components/cast/Cast"));
 const Rewievs = lazy(() => import("./components/rewievs/Rewievs"));
 
 
