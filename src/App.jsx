@@ -14,15 +14,15 @@ const App = () => {
   return (
     <>
       <nav className={styles.navigation}>
-        <NavLink to="/" className={styles.link}>Home</NavLink>
-        <NavLink to="/searchmovie" className={styles.link}>Movies</NavLink>
+        <NavLink to="/KinoSearchRouter" className={styles.link}>Home</NavLink>
+        <NavLink to="KinoSearchRouter/searchmovie" className={styles.link}>Movies</NavLink>
         {/* <NavLink to='/'></NavLink> */}
       </nav>
       <Suspense fallback={"Loading..."}>
         <Routes>
-          <Route path="/" element={<TheBestMovies />} />
+          <Route path="/KinoSearchRouter" element={<TheBestMovies />} />
 
-          <Route path="/searchmovie" element={<Movies />} />
+          <Route path="KinoSearchRouter/searchmovie" element={<Movies />} />
           <Route path="/movies/:moviesId" element={<MovieDetails />}>
             <Route  path="cast" element={<Cast />} />
             <Route path="rewievs" element={<Rewievs />} />

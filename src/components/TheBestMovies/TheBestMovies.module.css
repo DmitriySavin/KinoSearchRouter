@@ -7,13 +7,13 @@
   /* width: 100hw; */
   list-style: none;
   margin: 0 auto;
-  /* padding: 0; */
+  padding: 0;
 }
 .item {
   flex-basis: calc((100% - 20px) / 2);
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  flex-direction: column; */
+  flex-direction: column;
 }
 
 .title {
