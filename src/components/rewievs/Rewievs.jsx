@@ -1,4 +1,4 @@
-import { useParams , Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import searchReviewMovie from "../../API/searchReviews";
 import { useEffect, useState } from "react";
 import { FaRegEyeSlash } from "react-icons/fa";
@@ -6,6 +6,8 @@ import { FaRegEyeSlash } from "react-icons/fa";
 const Rewievs = () => {
   const { moviesId } = useParams();
   const [reviews, setReviews] = useState(null);
+
+  console.log(reviews);
 
   useEffect(() => {
     searchReviewMovie(moviesId).then(setReviews);
@@ -22,9 +24,13 @@ const Rewievs = () => {
       </Link>
 
       <ul>
-        {results.map((result) => (
-          <li key={result.author}>{result.author}</li>
-        ))}
+        {results.length === 0 ? (
+          <li>We dont have any review in this movie</li>
+        ) : (
+          results.map((result) => (
+            <li key={result.id || result.author}>{result.author}</li>
+          ))
+        )}
       </ul>
     </>
   );
