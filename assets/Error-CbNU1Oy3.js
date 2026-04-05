@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-BnxRlLMJ.js";import{r as t}from"./index-CggUE1Wq.js";var n=e(),r=()=>(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(`h2`,{children:`page not found...`}),(0,n.jsx)(`button`,{type:`button`,children:(0,n.jsx)(t,{to:`/`,children:`Back`})})]});export{r as default};
